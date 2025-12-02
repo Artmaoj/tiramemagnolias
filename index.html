@@ -5,32 +5,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VOID</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
   <style>
     body {
       background-color: #ffffff8a;
     }
+
     .hero {
       background: linear-gradient(#8d0303, #ffffff), url('https://images.unsplash.com/photo-1585158538850-3c3b26a8f8b2') center/cover no-repeat;
       color: white;
       text-align: center;
       padding: 100px 20px;
     }
+
     .hero h1 {
       font-size: 3rem;
       font-weight: 700;
     }
+
+    /* Zoom suave nas imagens */
     .card img {
       height: 250px;
       object-fit: cover;
       border-top-left-radius: 15px;
       border-top-right-radius: 15px;
+      transition: .3s ease;
     }
+    .card:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Animação ao aparecer */
+    .animar {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: .8s ease;
+    }
+    .visivel {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     footer {
       background-color: #fc0a32;
       color: white;
       padding: 30px 0;
       text-align: center;
       margin-top: 50px;
+    }
+
+    /* Botão Voltar ao Topo */
+    #topoBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      padding: 10px 15px;
+      display: none;
+      border: none;
+      background: black;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 18px;
+      z-index: 9999;
+    }
+
+    /* Botão WhatsApp */
+    #zapBtn {
+      position: fixed;
+      bottom: 90px;
+      right: 30px;
+      background: #25D366;
+      padding: 12px 18px;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      z-index: 9999;
+    }
+    #zapBtn:hover {
+      background: #1ebe5c;
     }
   </style>
 </head>
@@ -39,7 +93,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar fixed-top" style="background-color: #ffffff;">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#"> VOID </a>
+      <a class="navbar-brand fw-bold" href="index.html"> VOID </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -57,7 +111,7 @@
   <section class="hero">
     <div class="container">
       <h1>VOID</h1>
-      <p class="lead">Maquiagem, cabelo e spa — você no seu melhor.</p>
+      <p class="lead"></p>
       <a href="#servicos" class="btn btn-light btn-lg mt-3">Conheça nossos serviços</a>
     </div>
   </section>
@@ -70,41 +124,43 @@
     </div>
 
     <div class="row g-4">
-      <!-- Maquiagem -->
+
+      <!-- Consoles -->
       <div class="col-md-4">
-        <div class="card shadow-sm border-0 rounded-4">
-          <img src="https://imgs.search.brave.com/1HV5n9EQ-DRsdLSEe5t-EKyGoa9eDrY6iOFNOZQaAos/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ibG9n/LmxkZWxpbmRhLmNv/bS5ici93cC1jb250/ZW50L3VwbG9hZHMv/MjAyMS8wMS9tYXF1/aWFnZW0tcm9zYS1i/ZWF1dHlieWNoYXN0/aXR5Xy0xMDI0eDU3/Ni5qcGc" class="card-img-top" alt="Maquiagem">
+        <div class="card shadow-sm border-0 rounded-4 animar">
+          <img src="https://sm.ign.com/ign_br/screenshot/default/console_b8u4.jpg" class="card-img-top">
           <div class="card-body text-center">
-            <h5 class="card-title">Maquiagem Profissional</h5>
-            <p class="card-text text-muted">Realce sua beleza natural para qualquer ocasião — festas, noivas e eventos.</p>
-            <a href="agendar.html" class="btn btn-dark">Agendar</a>
+            <h5 class="card-title">Consoles</h5>
+            <p class="card-text text-muted">Compre aqui o seu console dos sonhos.</p>
+            <a href="produto.html" class="btn btn-dark">Comprar</a>
           </div>
         </div>
       </div>
 
-      <!-- Cabelo -->
+      <!-- Games -->
       <div class="col-md-4">
-        <div class="card shadow-sm border-0 rounded-4">
-          <img src="https://imgs.search.brave.com/az8gJde3BSd7-F0cjXYJkQNpxVshK0hVokFfXUH2TEg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zMi1n/bGFtb3VyLmdsYmlt/Zy5jb20vVzcyakFB/ZHNJc0R1Zi1fQ1NE/enBiRW82bndjPS8w/eDA6MTQ0MHg4Mzcv/ODg4eDAvc21hcnQv/ZmlsdGVyczpzdHJp/cF9pY2MoKS9pLnMz/LmdsYmltZy5jb20v/djEvQVVUSF9iYTNk/Yjk4MWU2ZDE0ZTU0/YmI4NGJlMzFjOTIz/YjAwYy9pbnRlcm5h/bF9waG90b3MvYnMv/MjAyNC9nL3gvTUg0/WFhDU0Jpekx6ZVVa/eGFLUHcvZGltaXRy/aXNoYWlyLTE3MTUw/OTEyODAtMzM2Mjc1/MTg1MDkzNDE0NTMx/MS0xMDM4MDkyNy5q/cGc" class="card-img-top" alt="Cabelo">
+        <div class="card shadow-sm border-0 rounded-4 animar">
+          <img src="https://gameplayscassi.com.br/wp-content/uploads/2023/01/6-maneiras-inteligentes-de-economizar-com-jogos-02.jpg" class="card-img-top">
           <div class="card-body text-center">
-            <h5 class="card-title">Cabelos e Penteados</h5>
-            <p class="card-text text-muted">Cortes modernos, coloração e penteados feitos com técnica e estilo.</p>
-            <a href="cabelos.html" class="btn btn-dark">Ver opções</a>
+            <h5 class="card-title">Games</h5>
+            <p class="card-text text-muted">Se divirta com diversos jogos por um preço acessível.</p>
+            <a href="produto.html" class="btn btn-dark">Ver jogos</a>
           </div>
         </div>
       </div>
 
-      <!-- Spa -->
+      <!-- Acessórios -->
       <div class="col-md-4">
-        <div class="card shadow-sm border-0 rounded-4">
-          <img src="https://imgs.search.brave.com/lQweFpeUs2vtXr5skqpIO5WO7p3xiKL2dk9YsngRPpM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/YXdzbGkuY29tLmJy/LzYwMHg0NTAvMTY5/Ny8xNjk3NTg5L3By/b2R1dG8vNzkwOTQ3/MzMvYjJjYmUxNTY0/MS5qcGc" class="card-img-top" alt="Spa">
+        <div class="card shadow-sm border-0 rounded-4 animar">
+          <img src="https://netshopinformatica.com.br/uploads/content_manager/contents/263/bora-jogar-4-acessorios-gamer-para-dar-um-up-no-seu-setup.png" class="card-img-top">
           <div class="card-body text-center">
-            <h5 class="card-title">Spa & Relaxamento</h5>
-            <p class="card-text text-muted">Momentos de autocuidado: massagens, limpeza de pele e revitalização completa.</p>
-            <a href="spa.html" class="btn btn-dark">Conhecer</a>
+            <h5 class="card-title">Acessórios</h5>
+            <p class="card-text text-muted">Fones gamers, teclado, mouse, monitores e mais!</p>
+            <a href="produto.html" class="btn btn-dark">Comprar</a>
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -132,10 +188,71 @@
 
   <!-- Rodapé -->
   <footer>
-    <p>&copy; 2025 Studio Débora Pereira — Todos os direitos reservados</p>
-    <p><small>Desenvolvido com por Arthur Barbosa</small></p>
+    <p>&copy; 2025 Void™ — Todos os direitos reservados</p>
+    <p><small>Desenvolvido por Void™.</small></p>
   </footer>
 
+  <!-- Botão Voltar ao Topo -->
+  <button id="topoBtn">↑ Topo</button>
+
+  <!-- Scripts -->
+  <script>
+    /* Efeito de digitação */
+    const textoHero = "A melhor loja gamer da região!";
+    let index = 0;
+
+    function digitar() {
+      if (index < textoHero.length) {
+        document.querySelector(".lead").textContent += textoHero.charAt(index);
+        index++;
+        setTimeout(digitar, 60);
+      }
+    }
+    digitar();
+
+    /* Rolagem suave */
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener("click", function(e) {
+        e.preventDefault();
+        const destino = document.querySelector(this.getAttribute("href"));
+        destino.scrollIntoView({ behavior: "smooth" });
+      });
+    });
+
+    /* Animação ao aparecer */
+    const animados = document.querySelectorAll('.animar');
+
+    function animarScroll() {
+      animados.forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+          el.classList.add('visivel');
+        }
+      });
+    }
+    window.addEventListener("scroll", animarScroll);
+    animarScroll();
+
+    /* Navbar com sombra */
+    const navbar = document.querySelector("nav");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) {
+        navbar.style.boxShadow = "0 2px 10px rgba(0,0,0,0.2)";
+      } else {
+        navbar.style.boxShadow = "none";
+      }
+    });
+
+    /* Botão Topo */
+    const btnTopo = document.getElementById("topoBtn");
+    window.addEventListener("scroll", () => {
+      btnTopo.style.display = window.scrollY > 400 ? "block" : "none";
+    });
+    btnTopo.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
