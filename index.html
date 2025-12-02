@@ -1,24 +1,141 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Afriniano</title>
-    <link rel="icon" href="" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VOID</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #ffffff8a;
+    }
+    .hero {
+      background: linear-gradient(#8d0303, #ffffff), url('https://images.unsplash.com/photo-1585158538850-3c3b26a8f8b2') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    .card img {
+      height: 250px;
+      object-fit: cover;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+    footer {
+      background-color: #fc0a32;
+      color: white;
+      padding: 30px 0;
+      text-align: center;
+      margin-top: 50px;
+    }
+  </style>
 </head>
 <body>
-    
-<header>
-    <img src="" alt="figurinha" class="figurinha">
-    <h1>Void</h1>
-    <p>Nossa loja de games online para aqueles que acreditam</p>
-</header>
 
-<nav>
-    <ul class="menuprincipal">
-        <li><a href="index.html">INÍCIO</a></li>
-        <li><a href="produto.html">SOBRE</a></li>
-    </ul>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar fixed-top" style="background-color: #ffffff;">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#"> VOID </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-</nav>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>VOID</h1>
+      <p class="lead">Maquiagem, cabelo e spa — você no seu melhor.</p>
+      <a href="#servicos" class="btn btn-light btn-lg mt-3">Conheça nossos serviços</a>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section id="servicos" class="container py-5">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Nossos Serviços</h2>
+      <p class="text-muted">Transforme seu visual com profissionais de confiança.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Maquiagem -->
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 rounded-4">
+          <img src="https://imgs.search.brave.com/1HV5n9EQ-DRsdLSEe5t-EKyGoa9eDrY6iOFNOZQaAos/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ibG9n/LmxkZWxpbmRhLmNv/bS5ici93cC1jb250/ZW50L3VwbG9hZHMv/MjAyMS8wMS9tYXF1/aWFnZW0tcm9zYS1i/ZWF1dHlieWNoYXN0/aXR5Xy0xMDI0eDU3/Ni5qcGc" class="card-img-top" alt="Maquiagem">
+          <div class="card-body text-center">
+            <h5 class="card-title">Maquiagem Profissional</h5>
+            <p class="card-text text-muted">Realce sua beleza natural para qualquer ocasião — festas, noivas e eventos.</p>
+            <a href="agendar.html" class="btn btn-dark">Agendar</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cabelo -->
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 rounded-4">
+          <img src="https://imgs.search.brave.com/az8gJde3BSd7-F0cjXYJkQNpxVshK0hVokFfXUH2TEg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zMi1n/bGFtb3VyLmdsYmlt/Zy5jb20vVzcyakFB/ZHNJc0R1Zi1fQ1NE/enBiRW82bndjPS8w/eDA6MTQ0MHg4Mzcv/ODg4eDAvc21hcnQv/ZmlsdGVyczpzdHJp/cF9pY2MoKS9pLnMz/LmdsYmltZy5jb20v/djEvQVVUSF9iYTNk/Yjk4MWU2ZDE0ZTU0/YmI4NGJlMzFjOTIz/YjAwYy9pbnRlcm5h/bF9waG90b3MvYnMv/MjAyNC9nL3gvTUg0/WFhDU0Jpekx6ZVVa/eGFLUHcvZGltaXRy/aXNoYWlyLTE3MTUw/OTEyODAtMzM2Mjc1/MTg1MDkzNDE0NTMx/MS0xMDM4MDkyNy5q/cGc" class="card-img-top" alt="Cabelo">
+          <div class="card-body text-center">
+            <h5 class="card-title">Cabelos e Penteados</h5>
+            <p class="card-text text-muted">Cortes modernos, coloração e penteados feitos com técnica e estilo.</p>
+            <a href="cabelos.html" class="btn btn-dark">Ver opções</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spa -->
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 rounded-4">
+          <img src="https://imgs.search.brave.com/lQweFpeUs2vtXr5skqpIO5WO7p3xiKL2dk9YsngRPpM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/YXdzbGkuY29tLmJy/LzYwMHg0NTAvMTY5/Ny8xNjk3NTg5L3By/b2R1dG8vNzkwOTQ3/MzMvYjJjYmUxNTY0/MS5qcGc" class="card-img-top" alt="Spa">
+          <div class="card-body text-center">
+            <h5 class="card-title">Spa & Relaxamento</h5>
+            <p class="card-text text-muted">Momentos de autocuidado: massagens, limpeza de pele e revitalização completa.</p>
+            <a href="spa.html" class="btn btn-dark">Conhecer</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="container py-5">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Entre em Contato</h2>
+      <p class="text-muted">Agende seu horário ou tire suas dúvidas com nossa equipe.</p>
+    </div>
+    <form class="row g-3 justify-content-center">
+      <div class="col-md-4">
+        <input type="text" class="form-control" placeholder="Seu nome" required>
+      </div>
+      <div class="col-md-4">
+        <input type="email" class="form-control" placeholder="Seu e-mail" required>
+      </div>
+      <div class="col-md-8">
+        <textarea class="form-control" rows="4" placeholder="Mensagem"></textarea>
+      </div>
+      <div class="col-md-8 text-center">
+        <button class="btn btn-dark btn-lg mt-2" type="submit">Enviar</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 Studio Débora Pereira — Todos os direitos reservados</p>
+    <p><small>Desenvolvido com por Arthur Barbosa</small></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
