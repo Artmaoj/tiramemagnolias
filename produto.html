@@ -1,71 +1,257 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VOID</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Venda de Consoles - VOID</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
   <style>
     body {
-      background-color: #ffffff8a;
+      padding-top: 70px;
+      background-color: #f8f9fa;
     }
+
+    .navbar {
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #dc3545;
+    }
+
     .hero {
-      background: linear-gradient(#8d0303, #ffffff), url('https://images.unsplash.com/photo-1585158538850-3c3b26a8f8b2') center/cover no-repeat;
+      background-color: #dc3545;
       color: white;
+      padding: 60px 0;
       text-align: center;
-      padding: 100px 20px;
+      margin-bottom: 40px;
     }
+
     .hero h1 {
-      font-size: 3rem;
-      font-weight: 700;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
     }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 40px 0 20px 0;
+      color: #333;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
     .card img {
-      height: 250px;
-      object-fit: cover;
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
+      height: 200px;
+      object-fit: contain;
+      padding: 15px;
+      background-color: #f8f9fa;
     }
-    footer {
-      background-color: #fc0a32;
+
+    .card-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      border-radius: 5px;
+    }
+
+    .footer {
+      background-color: #333;
       color: white;
       padding: 30px 0;
+      margin-top: 60px;
       text-align: center;
-      margin-top: 50px;
     }
   </style>
 </head>
+
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar fixed-top" style="background-color: #ffffff;">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html"> VOID </a>
+      <a class="navbar-brand" href="index.html">VOID</a>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="">Início</a></li>
-          <li class="nav-item"><a class="nav-link" href="#consoles"></a></li>
-          <li class="nav-item"><a class="nav-link" href="#acessorios"></a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#xbox">Xbox</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#playstation">PlayStation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#nintendo">Nintendo</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- Hero -->
-  <section class="hero">
+  <div class="hero">
     <div class="container">
-      <h1>VOID</h1>
-      <p class="lead">Jogos , Consoles e Acessórios</p>
+      <h1>Consoles VOID</h1>
+      <p>Os melhores consoles com os melhores preços</p>
     </div>
-  </section>
-  <!-- Rodapé -->
-  <footer>
-    <p>&copy; 2025 Void™ — Todos os direitos reservados</p>
-    <p><small>Desenvolvido pela Void™.</small></p>
+  </div>
+
+  <!-- Conteúdo -->
+  <div class="container">
+
+    <!-- Xbox -->
+    <section id="xbox">
+      <h2 class="section-title">Xbox</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Xbox_Series_X_Console_Set.jpg" alt="Xbox Series X">
+            <div class="card-body">
+              <h5 class="card-title">Xbox Series X</h5>
+              <p class="card-text">Console de última geração com jogos em 4K.</p>
+              <button class="btn btn-success w-100">Comprar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Xbox_Series_S.jpg" alt="Xbox Series S">
+            <div class="card-body">
+              <h5 class="card-title">Xbox Series S</h5>
+              <p class="card-text">Versão compacta e digital do Xbox.</p>
+              <button class="btn btn-success w-100">Comprar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Xbox-One-S.png" alt="Xbox One S">
+            <div class="card-body">
+              <h5 class="card-title">Xbox One S</h5>
+              <p class="card-text">Ótima opção para começar no Xbox.</p>
+              <button class="btn btn-success w-100">Comprar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PlayStation -->
+    <section id="playstation">
+      <h2 class="section-title">PlayStation</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/PlayStation_5_and_DualSense.png" alt="PlayStation 5">
+            <div class="card-body">
+              <h5 class="card-title">PlayStation 5</h5>
+              <p class="card-text">Console next-gen com exclusivos incríveis.</p>
+              <button class="btn btn-primary w-100">Comprar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/46/PS4-JCUH-1000AD01_04.jpg" alt="PlayStation 4 Slim">
+            <div class="card-body">
+              <h5 class="card-title">PlayStation 4 Slim</h5>
+              <p class="card-text">Grande catálogo de jogos disponíveis.</p>
+              <button class="btn btn-primary w-100">Comprar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/PS4_Pro.png" alt="PlayStation 4 Pro">
+            <div class="card-body">
+              <h5 class="card-title">PlayStation 4 Pro</h5>
+              <p class="card-text">Versão mais potente do PS4.</p>
+              <button class="btn btn-primary w-100">Comprar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nintendo -->
+    <section id="nintendo">
+      <h2 class="section-title">Nintendo</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Nintendo_Switch_2019_Console_Set.jpg" alt="Nintendo Switch">
+            <div class="card-body">
+              <h5 class="card-title">Nintendo Switch</h5>
+              <p class="card-text">Jogue em casa ou em qualquer lugar.</p>
+              <button class="btn btn-danger w-100">Comprar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Nintendo-Switch-Lite.jpg" alt="Nintendo Switch Lite">
+            <div class="card-body">
+              <h5 class="card-title">Nintendo Switch Lite</h5>
+              <p class="card-text">Versão portátil do Switch.</p>
+              <button class="btn btn-danger w-100">Comprar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Nintendo_Wii_%28RVL-001%29.png" alt="Nintendo Wii">
+            <div class="card-body">
+              <h5 class="card-title">Nintendo Wii</h5>
+              <p class="card-text">Diversão garantida para a família.</p>
+              <button class="btn btn-danger w-100">Comprar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 VOID </p>
+      <p>Email: ********* /p>
+    </div>
   </footer>
 
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
+</body>
+</html>
+
