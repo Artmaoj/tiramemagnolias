@@ -258,18 +258,7 @@
       });
     }
     window.addEventListener("scroll", animarScroll);
-    animarScroll();
-
-    /* Navbar com sombra */
-    const navbar = document.querySelector("nav");
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 100) {
-        navbar.style.boxShadow = "0 2px 10px rgba(0,0,0,0.2)";
-      } else {
-        navbar.style.boxShadow = "none";
-      }
-    });
-
+  
     /* Botão Topo */
     const btnTopo = document.getElementById("topoBtn");
     window.addEventListener("scroll", () => {
@@ -284,6 +273,7 @@
 
 </body>
 </html>
+
 
 
 
