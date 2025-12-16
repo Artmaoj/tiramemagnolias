@@ -262,7 +262,7 @@
     /* Botão Topo */
     const btnTopo = document.getElementById("topoBtn"); 
     window.addEventListener("scroll", () => {
-      btnTopo.style.display = window.scrollY > 100 ? "block" : "none";
+      btnTopo.style.display = window.scrollY > 400 ? "block" : "none";
     });
     btnTopo.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -273,6 +273,7 @@
 
 </body>
 </html>
+
 
 
 
